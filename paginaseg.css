@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2d8287; /* Color de fondo del encabezado */
+    color: white; /* Color del texto del encabezado */
+    padding: 10px;
+    background: rgb(131, 192, 230) url('imgns/hero-scene-layer-1.png') center/cover fixed; /* Fondo con superposición */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea el contenido a la izquierda */
+    margin-top: 20px; /* Espacio superior para separar del encabezado */
+    height: 20cm;
+}
+
+label {
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el combo box */
+}
+
+select {
+    width: 150px; /* Ajusta el ancho según sea necesario */
+}
+
+footer {
+    background-color: #ff9c9c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para la sección de imágenes en el encabezado */
+#imagenes_inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imagenes_inicio div {
+    text-align: center;
+    margin: 10px;
+}
+
+#imagenes_inicio img {
+    max-width: 100%;
+    height: 150px; /* Ajusta esta altura según tus preferencias */
+    border: 3px solid rgb(186, 186, 186);
+    background-color: white;
+    border-radius: 8px;
+}
+
+#imagenes_inicio h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+#seleccion {
+    border: none; /* Elimina los bordes del select */
+    background-color: rgb(254, 88, 115); /* Establece el color de fondo en rosa */
+    color: white; /* Establece el color del texto en blanco para contrastar */
+    padding: 10px;
+    padding-left: 7px;
+    border-radius: 15px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+/* Establece colores diferentes para cada opción */
+#seleccion option[value="slime"] {
+    background-color: rgb(244, 153, 226);
+    
+}
+
+#seleccion option[value="recursos"] {
+    background-color: rgb(173, 230, 198); /* Color para la opción "Recursos" */
+}
+
+#seleccion option[value="npc"] {
+    background-color: rgb(216, 240, 128); /* Color para la opción "NPC" */
+}
+/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
+
+#slime {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+}
+
+#fila1, #fila2 {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos en una fila */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+    margin-bottom: 20px; /* Espacio entre las filas */
+}
+
+#fila1 img, #fila2 img, #fila3 img {
+    padding-top: 15px;
+    max-width: 100px;
+    margin-right: 20px; /* Espacio a la derecha de las imágenes */
+}
+
+#fila1 h3, #fila2 h3 {
+    margin-bottom: 5px; /* Espacio debajo de los encabezados h3 */
+    margin: 15px;
+}
+
+#fila1 p, #fila2 p {
+    margin-bottom: 10px; /* Espacio debajo de los párrafos */
+}
+
+#fila2 img {
+    padding-top: 15px;
+    max-width: 100px;
+    margin-top: 10px; /* Espacio encima de la última imagen */
+}
+/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
+
+#fila3 {
+    max-width: 800px; /* Establece el ancho máximo deseado */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.glide-container {
+    width: 100%; /* Asegura que el contenedor del carrusel ocupe todo el ancho disponible */
+}

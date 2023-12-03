@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('imgns/fondo.png') center/cover fixed; /* Fondo principal */
+}
+
+header {
+    position: relative;
+    background: rgba(255, 128, 179, 0.5) url('imgns/hero-scene-layer-1.png') center/cover no-repeat; /* Fondo con superposición */
+    height: 9cm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.opciones {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; /* Cambiado a columna */
+    align-items: flex-end; /* Alineado a la derecha */
+    border: 2px solid #fff;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.opciones ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Cambiado a columna */
+    text-align: right; /* Alineado a la derecha */
+}
+
+.opciones li {
+    margin-bottom: 10px; /* Agregado margen inferior */
+}
+
+.opciones a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+}
+
+.opciones a:hover {
+    color: #ff80b3;
+}
+
+/* Estilos adicionales */
+
+.contenido {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5em;
+    -webkit-text-stroke: 2px white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #e75a92;
+}
+
+.botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: #ff80b3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+}
+
+.boton:hover {
+    background-color: #e75a92;
+}
+
+main {
+    background-color: #fff;
+}
+
+footer {
+    background-color: #001f3f;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+footer .botones2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer .boton1,
+footer .boton2,
+footer .boton3,
+footer .boton4 {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
+}
+
+footer .boton1:hover,
+footer .boton2:hover,
+footer .boton3:hover,
+footer .boton4:hover {
+    background-color: #e75a92;
+    color: white;
+}
+
+/* Regla de medios para pantallas más pequeñas */
+
+@media screen and (max-width: 600px) {
+    .opciones {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .opciones ul {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    .opciones li {
+        margin-bottom: 10px;
+    }
+
+    body {
+        background-size: contain;
+    }
+}

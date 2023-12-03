@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paginaseg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section id="imagenes_inicio">
+            <div>
+                <img src="imgns/slime.png" alt="Slime">
+                <h3>Slimes</h3>
+            </div>
+    
+            <div>
+                <img src="imgns/recurso.png" alt="Recursos">
+                <h3>Recursos</h3>
+            </div>
+    
+            <div>
+                <img src="imgns/npc.png" alt="NPC">
+                <h3>NPC</h3>
+            </div>
+        </section>
+       
+    </header>
+    <main>
+        <div  id=".opciones">
+            <select id="seleccion">
+                <option value="slime">Slime</option>
+                <option value="recursos">Recursos</option>
+                <option value="npc">NPC</option>
+            </select>
+        </div>
+        <div id="slime">
+            <div id="fila1">
+                <img src="imgns/flutter.png" alt="mariposa">
+                <h3>Descripcion</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, distinctio labore doloribus repellendus doloremque, eos accusamus repellat tempora soluta corrupti minima odit sit quas. Amet enim debitis ad odit similique?
+                </p> 
+            </div>
+            <div id="fila2">
+                <h3>Ubicacion</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, ut? Odit placeat aliquam dolorum asperiores voluptatum amet tenetur debitis vero. Repudiandae totam enim accusantium alias recusandae necessitatibus, earum quasi obcaecati?
+                </p>
+                <img src="imgns/latest.png" alt="ubicacion">
+            </div>
+            <div id="fila3">
+                <h3> Combinaciones</h3>
+                <div class="glide-container">
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides">
+                                <li class="glide__slide"><img src="imgns/batty.png" alt="Imagen 1"></li>
+                                <li class="glide__slide"><img src="imgns/ring-tail.png" alt="Imagen 2"></li>
+                                <li class="glide__slide"><img src="imgns/slime.png" alt="Imagen 3"></li>
+                            </ul>
+                        </div>
+                        <div class="glide__arrows" data-glide-el="controls">
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 3,
+            focusAt: 'center',
+            breakpoints: {
+                800: {
+                    perView: 1
+                },
+                480: {
+                    perView: 1
+                }
+            }
+        }).mount();
+    </script>
+</body>
+</html>
