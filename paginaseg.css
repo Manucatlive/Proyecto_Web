@@ -22,35 +22,33 @@ label {
     margin-bottom: 5px;
 }
 
-select {
-    width: 150px;
-}
-
-footer {
-    background: #001f3f;
-    padding: 20px;
-    text-align: center;
-    transition: background-color 0.5s ease;
-}
-
-footer .botones2 {
+/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
+#opciones {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    margin-left: 10px; /* Añade margen izquierdo para separar del borde */
 }
 
-footer button {
-    padding: 10px 20px;
-    font-size: 1em;
+#seleccion {
     border: none;
-    border-radius: 20px;
-    background-color: transparent;
+    background-color: #fe5873;
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    margin-right: 10px;
+    padding: 15px;
+    padding-left: 7px;
+    border-radius: 15px;
+    text-align: center;
+    width: 150px; /* Ajusta el ancho según sea necesario */
+    margin-right: 10px; /* Añade margen derecho para separar de otros elementos */
 }
 
-/* Estilos para la sección de imágenes en el encabezado */
+#seleccion option {
+    padding: 10px;
+}
+
+#seleccion option[value="slime"] { background-color: #f499e2; }
+#seleccion option[value="recursos"] { background-color: #adf4c6; }
+#seleccion option[value="npc"] { background-color: #d8f080; }
+
 #imagenes_inicio {
     display: flex;
     justify-content: space-around;
@@ -65,8 +63,8 @@ footer button {
 }
 
 #imagenes_inicio img {
-    max-width: 100%;
-    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    width: 150px;
+    height: 150px;
     border: 3px solid #bababa;
     background-color: white;
     border-radius: 8px;
@@ -77,26 +75,6 @@ footer button {
     font-size: 1.5em;
 }
 
-#seleccion {
-    border: none;
-    background-color: #fe5873;
-    color: white;
-    padding: 10px;
-    padding-left: 7px;
-    border-radius: 15px;
-    margin-left: 10px;
-    text-align: center;
-}
-
-#seleccion option {
-    padding: 10px;
-}
-
-#seleccion option[value="slime"] { background-color: #f499e2; }
-#seleccion option[value="recursos"] { background-color: #adf4c6; }
-#seleccion option[value="npc"] { background-color: #d8f080; }
-
-/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 #slime {
     display: flex;
     flex-direction: column;
@@ -137,5 +115,43 @@ footer button {
 }
 
 .glide-container {
-    width: 30%;
+    width: 18cm;
+}
+
+/* Cambia el tamaño de .glide-container a 10cm cuando la pantalla es angosta */
+@media screen and (max-width: 768px) {
+    .glide-container {
+        width: 10cm;
+    }
+
+    #seleccion {
+        width: 100%; /* Hace que el combobox ocupe el ancho completo */
+        margin-right: 0; /* Elimina el espacio a la derecha */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-top: 10px; /* Agrega espacio en la parte superior */
+    }
+}
+
+footer {
+    background: #001f3f;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+footer .botones2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
 }
