@@ -6,53 +6,68 @@
     <link rel="stylesheet" href="paginaseg.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
-    <title>Document</title>
+    <title>Slimes</title>
 </head>
 <body>
     <header>
         <section id="imagenes_inicio">
-            <div>
+            <!-- Simplificación de los bloques de imágenes -->
+            <div class="imagen">
                 <img src="imgns/slime.png" alt="Slime">
                 <h3>Slimes</h3>
             </div>
     
-            <div>
+            <div class="imagen">
                 <img src="imgns/recurso.png" alt="Recursos">
                 <h3>Recursos</h3>
             </div>
     
-            <div>
+            <div class="imagen">
                 <img src="imgns/npc.png" alt="NPC">
                 <h3>NPC</h3>
             </div>
         </section>
-       
     </header>
+
     <main>
-        <div  id=".opciones">
+        <!-- Simplificación del selector -->
+        <div id="opciones">
             <select id="seleccion">
                 <option value="slime">Slime</option>
                 <option value="recursos">Recursos</option>
                 <option value="npc">NPC</option>
             </select>
         </div>
+
         <div id="slime">
-            <div id="fila1">
-                <img src="imgns/flutter.png" alt="mariposa">
+            <!-- Simplificación del bloque de información sobre el slime -->
+            <div class="fila">
+                <img src="imgns/slime_rosa.png" alt="mariposa">
                 <h3>Descripcion</h3>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, distinctio labore doloribus repellendus doloremque, eos accusamus repellat tempora soluta corrupti minima odit sit quas. Amet enim debitis ad odit similique?
-                </p> 
+                    El Slime Rosa es un slime de Slime Rancher. Este es el slime estándar del juego.
+                    Son los más comunes de todos, y por suerte son inofensivos. Dada su abundancia en las zonas al principio del juego, son la mejor opción para comenzar la granja. Son los slimes que más se necesitan en la Ciencia Slime, ya que la mayoría de materiales requeridos en esta son sus plorts.
+                </p>
             </div>
-            <div id="fila2">
+
+            <div class="fila">
                 <h3>Ubicacion</h3>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, ut? Odit placeat aliquam dolorum asperiores voluptatum amet tenetur debitis vero. Repudiandae totam enim accusantium alias recusandae necessitatibus, earum quasi obcaecati?
+                    Los slimes rosas son los slimes más comunes que se encuentran en la Lejana, Lejana Pradera. Son alegres, dóciles y los más sencillos de todos los slimes en el rancho. Un slime rosa comerá cualquier cosa que le pongas enfrente, aunque no tienen una comida favorita y sus plorts son los menos valiosos de todos los slimes
                 </p>
-                <img src="imgns/latest.png" alt="ubicacion">
+                <img src="imgns/fondo_slime.png" alt="ubicacion">
             </div>
-            <div id="fila3">
-                <h3> Combinaciones</h3>
+
+            <div class="fila">
+                <h4>Plortonomía</h4>
+                <p>
+                    Los Plorts Rosas son una excelente 'sustancia genérica multiusos' usada para fabricar cualquier cosa, desde productos alimenticios a limpiadores del hogar. Por toda la tierra, la gente come hamburguesas, endulza su café o limpia sus pisos con productos de plort rosas. ¡Eso es ser versátil!
+                </p>
+            </div>
+
+            <!-- Simplificación del bloque de combinaciones -->
+            <div class="fila">
+                <h3>Combinaciones</h3>
                 <div class="glide-container">
                     <div class="glide">
                         <div class="glide__track" data-glide-el="track">
@@ -68,14 +83,46 @@
                         </div>
                     </div>
                 </div>
+                
+                <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+                <script>
+                    new Glide('.glide', {
+                        type: 'carousel',
+                        perView: 3,
+                        focusAt: 'center',
+                        startAt: 0, // Asegúrate de que inicie en la primera imagen
+                        breakpoints: {
+                            800: {
+                                perView: 1
+                            },
+                            480: {
+                                perView: 1
+                            }
+                        },
+                        rewind: true, // Permite el rebobinado infinito
+                        peek: {
+                            before: 0,
+                            after: 0
+                        }
+                    }).mount();
+                </script>
             </div>
         </div>
     </main>
-    <footer>
 
+    <footer>
+        <div class="pie">
+            <div class="botones2">
+                <!-- Simplificación de los botones de navegación -->
+                <a class="boton1" href="paginaseg.html">Home</a>
+                <button class="boton2">Productos</button>
+                <button class="boton3">Company</button>
+                <button class="boton4">Blog</button>
+            </div>
+        </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <script>
         new Glide('.glide', {
             type: 'carousel',
@@ -90,6 +137,6 @@
                 }
             }
         }).mount();
-    </script>
+    </script> -->
 </body>
 </html>

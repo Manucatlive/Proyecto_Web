@@ -6,33 +6,48 @@ body {
 }
 
 header {
-    background-color: #2d8287; /* Color de fondo del encabezado */
-    color: white; /* Color del texto del encabezado */
+    background: #2d8287 url('imgns/hero-scene-layer-1.png') center/cover fixed;
+    color: white;
     padding: 10px;
-    background: rgb(131, 192, 230) url('imgns/hero-scene-layer-1.png') center/cover fixed; /* Fondo con superposición */
 }
 
 main {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    margin-top: 20px; /* Espacio superior para separar del encabezado */
-    height: 20cm;
+    align-items: center; /* Alinea los elementos al centro */
+    margin-top: 20px;
 }
 
 label {
-    margin-bottom: 5px; /* Espacio entre la etiqueta y el combo box */
+    margin-bottom: 5px;
 }
 
 select {
-    width: 150px; /* Ajusta el ancho según sea necesario */
+    width: 150px;
 }
 
 footer {
-    background-color: #ff9c9c;
-    color: white;
+    background: #001f3f;
+    padding: 20px;
     text-align: center;
-    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+footer .botones2 {
+    display: flex;
+    justify-content: center;
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-right: 10px;
 }
 
 /* Estilos para la sección de imágenes en el encabezado */
@@ -40,29 +55,32 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la fila siguiente si no hay suficiente espacio */
 }
 
 #imagenes_inicio div {
     text-align: center;
     margin: 10px;
+    flex: 1; /* Hace que cada div ocupe el mismo espacio en la fila */
 }
 
 #imagenes_inicio img {
     max-width: 100%;
-    height: 150px; /* Ajusta esta altura según tus preferencias */
-    border: 3px solid rgb(186, 186, 186);
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    border: 3px solid #bababa;
     background-color: white;
     border-radius: 8px;
 }
 
 #imagenes_inicio h3 {
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
+
 #seleccion {
-    border: none; /* Elimina los bordes del select */
-    background-color: rgb(254, 88, 115); /* Establece el color de fondo en rosa */
-    color: white; /* Establece el color del texto en blanco para contrastar */
+    border: none;
+    background-color: #fe5873;
+    color: white;
     padding: 10px;
     padding-left: 7px;
     border-radius: 15px;
@@ -70,60 +88,54 @@ footer {
     text-align: center;
 }
 
-/* Establece colores diferentes para cada opción */
-#seleccion option[value="slime"] {
-    background-color: rgb(244, 153, 226);
-    
+#seleccion option {
+    padding: 10px;
 }
 
-#seleccion option[value="recursos"] {
-    background-color: rgb(173, 230, 198); /* Color para la opción "Recursos" */
-}
+#seleccion option[value="slime"] { background-color: #f499e2; }
+#seleccion option[value="recursos"] { background-color: #adf4c6; }
+#seleccion option[value="npc"] { background-color: #d8f080; }
 
-#seleccion option[value="npc"] {
-    background-color: rgb(216, 240, 128); /* Color para la opción "NPC" */
-}
 /* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
-
 #slime {
     display: flex;
-    flex-direction: column; /* Alinea los elementos en una columna */
+    flex-direction: column;
+    align-items: center; /* Alinea los elementos al centro */
 }
 
-#fila1, #fila2 {
+#slime > div {
     display: flex;
-    flex-direction: row; /* Alinea los elementos en una fila */
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-    margin-bottom: 20px; /* Espacio entre las filas */
+    flex-direction: column; /* Cambiado a columna para alinear verticalmente */
+    align-items: center; /* Alinea los elementos al centro */
+    margin-bottom: 20px;
 }
 
-#fila1 img, #fila2 img, #fila3 img {
+#slime img {
     padding-top: 15px;
     max-width: 100px;
-    margin-right: 20px; /* Espacio a la derecha de las imágenes */
+    margin-right: 20px;
 }
 
-#fila1 h3, #fila2 h3 {
-    margin-bottom: 5px; /* Espacio debajo de los encabezados h3 */
-    margin: 15px;
+#slime h3 {
+    margin: 15px 0;
+    font-size: 1.5em; /* Tamaño mediano */
 }
 
-#fila1 p, #fila2 p {
-    margin-bottom: 10px; /* Espacio debajo de los párrafos */
+#slime p {
+    margin: 15px 0;
+    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
+    text-align: center; /* Centra el texto */
 }
 
 #fila2 img {
-    padding-top: 15px;
-    max-width: 100px;
-    margin-top: 10px; /* Espacio encima de la última imagen */
+    margin-top: 10px;
 }
-/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 
 #fila3 {
-    max-width: 800px; /* Establece el ancho máximo deseado */
-    margin: 0 auto; /* Centra el contenedor */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .glide-container {
-    width: 100%; /* Asegura que el contenedor del carrusel ocupe todo el ancho disponible */
+    width: 30%;
 }
