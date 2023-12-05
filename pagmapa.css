@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenido {
+    position: relative;
+}
+
+.botones {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.boton {
+    border: 2px solid #fff; /* Bordes blancos */
+    border-radius: 45%;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background: linear-gradient(to bottom, #ff9c9c, #ff7070); /* Fondo rosa */
+    color: #fff; /* Color del texto en los botones */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo adicional para resaltar el botón activo */
+.boton:focus,
+.boton:hover {
+    background: linear-gradient(to bottom, #4a90e2, #4169e1); /* Cambiar el fondo a azul con efecto de agua subiendo */
+    animation: agua 0.5s ease forwards; /* Definir la animación */
+}
+
+@keyframes agua {
+    from {
+        background-position: 0% 100%; /* Inicializar la posición del fondo para la animación */
+    }
+    to {
+        background-position: 0% 0%; /* Finalizar la posición del fondo para la animación */
+    }
+}
+
+.tod{
+    background: url('imgns/imgfondo.jpg') center/cover fixed; 
+    height: 100vh; 
+    overflow-y: auto; 
+}
+
+.imagen{
+    
+    /*text-align: 5px;*/
+    margin-top: 5px; 
+    width: 1300px; 
+    height: 700px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagen2{
+    margin-top: 5px; 
+    width: 1300px; 
+    height: 700px; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    margin: 20px; /* Aumentar el espacio entre el contenido y el borde de la página */
+    font-family: 'Arial', sans-serif; /* Cambiar la fuente a una que se asemeje a letras gelatinosas */
+}
+
+.ubicaciones {
+    background-color: #ff9c9c;
+    padding: 7px;
+    display: inline-block;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    position: absolute;
+    top: 400px; /* Ajustar la posición hacia arriba o abajo jaja */
+    left: 20px; 
+}
+
+.imagen2 {
+    margin-top: -200px; 
+    width: 800px; 
+    height: 600px; 
+    display: block;
+    margin-left: 5px;/*jaja lo encontre: mueve a los costados izquierdo*/
+   /* margin-right: 5px;/*jaja lo encontre: mueve a los costados derecho*/
+}
+
+.contenido-descripcion {
+    text-align: center; /* Centrar el contenido debajo de la imagen */
+    margin-top: 20px; /* Ajustar el espacio sobre el contenido */
+}
+
+.subtitulo {
+    float: right;
+    margin-right: 20px; 
+    margin-top: -600px; 
+    background-color: #ff9c9c;
+    padding: 10px;
+    border-radius: 15px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff7070; /* Ajusta el grosor y color del borde */
+    max-width: 400px; /* Ajusta la anchura máxima */
+}
+.subtitulo h2 {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 10px; /* Ajusta el espacio entre el h2 y el párrafo según sea necesario */
+}
+
+.subtitulo2 {
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+    background-color: #ff9c9c;
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff7070;
+    max-width: 1000px;
+    clear: both;
+    text-align: center; /* Centra el texto */
+}
+
+.subtitulo2 h2 {
+    text-align: left; /* Alinea el h2 a la izquierda */
+    margin-bottom: 10px;
+}
+
+
+
+
+.ubicaciones:hover {
+    background-color: #ff7070;
+}
+
+.ubicaciones select {
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px; 
+    height: 70px; 
+    width: 300px; 
+}
+
+.ubicaciones select option {
+    border-radius: 8px; 
+}
+
+.ubicaciones select option:checked {
+    background-color: #ff7070;
+    color: #b36a6a;
+}
+
+body, .ubicaciones, .ubicaciones select, .ubicaciones select option {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+

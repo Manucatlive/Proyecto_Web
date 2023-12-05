@@ -97,6 +97,8 @@ label {
 #slime h3 {
     margin: 15px 0;
     font-size: 1.5em; /* Tamaño mediano */
+    padding-left: 40px;
+    padding-right: 50px;
 }
 
 #slime p {
@@ -154,4 +156,10 @@ footer button {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-right: 10px;
+}
+div.botones2>a{
+    padding-top: 10px;
+    padding-right: 19px;
+    text-decoration: none;
+    color: white;
 }
