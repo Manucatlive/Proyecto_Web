@@ -7,6 +7,7 @@ body {
 header {
     background: #39a97e url('imgns/hero-scene-layer-1.png') center/cover fixed;
     color: rgb(255, 255, 255);
+    height: 500px;
     padding: 230px;
     position: relative;
     top: -50px;
