@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="paginaseg.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
     <title>Slimes</title>
 </head>
+
 <body>
     <header>
         <section id="imagenes_inicio">
@@ -16,12 +20,12 @@
                 <img src="imgns/slime.png" alt="Slime">
                 <h3>Slimes</h3>
             </div>
-    
+
             <div class="imagen">
                 <img src="imgns/recurso.png" alt="Recursos">
                 <h3>Recursos</h3>
             </div>
-    
+
             <div class="imagen">
                 <img src="imgns/npc.png" alt="NPC">
                 <h3>NPC</h3>
@@ -45,15 +49,25 @@
                 <img src="imgns/slime_rosa.png" alt="mariposa">
                 <h3>Descripcion</h3>
                 <p>
-                    El Slime Rosa es un slime de Slime Rancher. Este es el slime estándar del juego.
-                    Son los más comunes de todos, y por suerte son inofensivos. Dada su abundancia en las zonas al principio del juego, son la mejor opción para comenzar la granja. Son los slimes que más se necesitan en la Ciencia Slime, ya que la mayoría de materiales requeridos en esta son sus plorts.
+                    El Slime Rosa es un slime de Slime Rancher. Este es el slime estándar del juego. Son los más
+                    comunes
+                    de todos, y por suerte son inofensivos. Dada su abundancia en las zonas al principio del juego,
+                    son
+                    la mejor opción para comenzar la granja. Son los slimes que más se necesitan en la Ciencia Slime,
+                    ya
+                    que la mayoría de materiales requeridos en esta son sus plorts.
                 </p>
             </div>
 
             <div class="fila">
                 <h3>Ubicacion</h3>
                 <p>
-                    Los slimes rosas son los slimes más comunes que se encuentran en la Lejana, Lejana Pradera. Son alegres, dóciles y los más sencillos de todos los slimes en el rancho. Un slime rosa comerá cualquier cosa que le pongas enfrente, aunque no tienen una comida favorita y sus plorts son los menos valiosos de todos los slimes
+                    Los slimes rosas son los slimes más comunes que se encuentran en la Lejana, Lejana Pradera. Son
+                    alegres, dóciles y los más sencillos de todos los slimes en el rancho. Un slime rosa comerá
+                    cualquier
+                    cosa que le pongas enfrente, aunque no tienen una comida favorita y sus plorts son los menos
+                    valiosos
+                    de todos los slimes
                 </p>
                 <img src="imgns/fondo_slime.png" alt="ubicacion">
             </div>
@@ -61,82 +75,50 @@
             <div class="fila">
                 <h3>Plortonomía</h3>
                 <p>
-                    Los Plorts Rosas son una excelente 'sustancia genérica multiusos' usada para fabricar cualquier cosa, desde productos alimenticios a limpiadores del hogar. Por toda la tierra, la gente come hamburguesas, endulza su café o limpia sus pisos con productos de plort rosas. ¡Eso es ser versátil!
+                    Los Plorts Rosas son una excelente 'sustancia genérica multiusos' usada para fabricar cualquier
+                    cosa, desde productos alimenticios a limpiadores del hogar. Por toda la tierra, la gente come
+                    hamburguesas, endulza su café o limpia sus pisos con productos de plort rosas. ¡Eso es ser
+                    versátil!
                 </p>
             </div>
-
-            <!-- Simplificación del bloque de combinaciones -->
             <div class="fila">
                 <h3>Otras Criaturas</h3>
-                <div class="glide-container">
-                    <div class="glide">
+                <div class="glide-container" id="glide-container">
+                    <div class="glide" id="glide">
                         <div class="glide__track" data-glide-el="track">
                             <ul class="glide__slides">
                                 <li class="glide__slide"><img src="imgns/batty.png" alt="Imagen 1"></li>
                                 <li class="glide__slide"><img src="imgns/ring-tail.png" alt="Imagen 2"></li>
                                 <li class="glide__slide"><img src="imgns/slime.png" alt="Imagen 3"></li>
+                                <li class="glide__slide"><img src="imgns/community-layer-1.png" alt="Imagen 4">
+                                </li>
+                                <li class="glide__slide"><img src="imgns/flutter.png" alt="Imagen 5"></li>
+                                <li class="glide__slide"><img src="imgns/slime_rosa.png" alt="Imagen 6"></li>
                             </ul>
                         </div>
                         <div class="glide__arrows" data-glide-el="controls">
-                            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                            <button class="glide__arrow glide__arrow--left" data-glide-dir="prev">prev</button>
+                            <button class="glide__arrow glide__arrow--right" data-glide-dir="next">next</button>
                         </div>
                     </div>
                 </div>
-                
-                <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-                <script>
-                    new Glide('.glide', {
-                        type: 'carousel',
-                        perView: 3,
-                        focusAt: 'center',
-                        startAt: 0, // Asegúrate de que inicie en la primera imagen
-                        breakpoints: {
-                            800: {
-                                perView: 1
-                            },
-                            480: {
-                                perView: 1
-                            }
-                        },
-                        rewind: true, // Permite el rebobinado infinito
-                        peek: {
-                            before: 0,
-                            after: 0
-                        }
-                    }).mount();
-                </script>
+            </div>
+            <div id="recursos-contenido">
+                <h3>recursos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt autem sequi recusandae nulla id velit. Id voluptatem, sequi nemo voluptatibus laborum ut illum asperiores molestiae! Eligendi atque itaque repellendus.</p>
             </div>
         </div>
     </main>
-
     <footer>
         <div class="pie">
             <div class="botones2">
-                <!-- Simplificación de los botones de navegación -->
-                <a class="boton1" href="index.html">Home</a>
-                <button class="boton2">Productos</button>
-                <button class="boton3">Company</button>
-                <button class="boton4">Blog</button>
+                <a class="boton1" href="index.html" target="_blank">Home</a>
+                <a class="boton2" href="https://www.slimerancher.com/shop" target="_blank">Productos</a>
+                <a class="boton3" href="https://discord.com/invite/slimerancher" target="_blank">Discord</a>
             </div>
         </div>
     </footer>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-    <script>
-        new Glide('.glide', {
-            type: 'carousel',
-            perView: 3,
-            focusAt: 'center',
-            breakpoints: {
-                800: {
-                    perView: 1
-                },
-                480: {
-                    perView: 1
-                }
-            }
-        }).mount();
-    </script> -->
+    <script src="paginaseg.js"></script>
 </body>
+
 </html>

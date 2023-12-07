@@ -1,23 +1,49 @@
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #adf4c6;
 }
 
 header {
     background: #2d8287 url('imgns/hero-scene-layer-1.png') center/cover fixed;
-    color: white;
-    padding: 10px;
+    color: rgb(255, 255, 255);
+    padding: 350px;
+    position: relative;
+    top: -50px; /* Ajusta la distancia inicial desde arriba */
+    z-index: 1; /* Asegura que el header esté sobre el main */
+    opacity: 0; /* Hace que el header esté invisible inicialmente */
+    animation: slideDown 1s ease-out forwards; /* Define la animación */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2d8287 url('imgns/hero-scene-layer-1.png') center/cover fixed;
+    z-index: -1; /* Ajustado a -1 para que esté detrás del contenido del main */
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Alinea los elementos al centro */
-    margin-top: 20px;
+    background-image: url('imgns/fondosegundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: -510px;
+    padding-top: 300px;
+    height: 1010px;
+    z-index: 2; /* Ajustado a 2 para que esté sobre el header y su fondo */
 }
-
+div.opciones{
+    padding-top: 500px;
+}
+#recursos-contenido {
+    display: none;
+}
 label {
     margin-bottom: 5px;
 }
@@ -25,14 +51,14 @@ label {
 /* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 #opciones {
     display: flex;
-    justify-content: flex-start; /* Alinea los elementos al inicio (izquierda) */
+    /* justify-content: flex-start; Alinea los elementos al inicio (izquierda) */
     margin-left: 10px; /* Añade margen izquierdo para separar del borde */
 }
 
 #seleccion {
     border: none;
     background-color: #fe5873;
-    color: white;
+    color: rgb(243, 243, 243);
     padding: 15px;
     padding-left: 7px;
     border-radius: 15px;
@@ -66,7 +92,7 @@ label {
     width: 150px;
     height: 150px;
     border: 3px solid #bababa;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 8px;
 }
 
@@ -107,14 +133,14 @@ label {
     text-align: center; /* Centra el texto */
 }
 
-#fila2 img {
+/* #fila2 img {
     margin-top: 10px;
 }
 
 #fila3 {
     max-width: 800px;
     margin: 0 auto;
-}
+} */
 
 .glide-container {
     width: 18cm;
@@ -157,9 +183,37 @@ footer button {
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-right: 10px;
 }
+
 div.botones2>a{
     padding-top: 10px;
     padding-right: 19px;
     text-decoration: none;
     color: white;
+}
+
+@keyframes slideDown {
+    to {
+        top: 0; /* Mueve el header a su posición final */
+        opacity: 1; /* Hace que el header sea completamente visible */
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+img,h1,p,h2,h3,.fila{
+    view-timeline-name: --image;
+    view-timeline-axis: block ;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
