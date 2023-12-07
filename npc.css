@@ -7,7 +7,7 @@ body {
 header {
     background: #39a97e url('imgns/hero-scene-layer-1.png') center/cover fixed;
     color: rgb(255, 255, 255);
-    padding: 230px; /* Ajusta el valor de padding según sea necesario */
+    padding: 230px;
     position: relative;
     top: -50px;
     z-index: 1;
@@ -23,7 +23,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: #8a8e36 url('imgns/hero-scene-layer-1.png') center/cover fixed;
-    z-index: -1; /* Ajustado a -1 para que esté detrás del contenido del main */
+    z-index: -1; 
 }
 
 main {
@@ -35,16 +35,11 @@ main {
     margin-top: -590px;
     padding-top: 300px;
     height: 1710px;
-    z-index: 2; /* Ajustado a 2 para que esté sobre el header y su fondo */
+    z-index: 2; 
 }
 div.opciones{
     padding-top: 500px;
 }
-/* label {
-    margin-bottom: 5px;
-} */
-
-/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 #opciones {
     display: flex;
     padding-top: 250px;
@@ -59,8 +54,8 @@ div.opciones{
     padding-left: 7px;
     border-radius: 15px;
     text-align: center;
-    width: 150px; /* Ajusta el ancho según sea necesario */
-    margin-right: 10px; /* Añade margen derecho para separar de otros elementos */
+    width: 150px; 
+    margin-right: 10px; 
 }
 
 #seleccion option {
@@ -82,7 +77,7 @@ div.opciones{
 #imagenes_inicio div {
     text-align: center;
     margin: 10px;
-    flex: 1; /* Hace que cada div ocupe el mismo espacio en la fila */
+    flex: 1; 
 }
 
 #imagenes_inicio img {
@@ -102,13 +97,13 @@ div.opciones{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; /* Alinea los elementos al centro */
+    margin-top: 20px; 
 }
 
 #slime > div {
     display: flex;
-    flex-direction: column; /* Cambiado a columna para alinear verticalmente */
-    align-items: center; /* Alinea los elementos al centro */
+    flex-direction: column; 
+    align-items: center; 
     margin-bottom: 20px;
 }
 
@@ -120,31 +115,30 @@ div.opciones{
 
 #slime h3 {
     margin: 15px 0;
-    font-size: 1.5em; /* Tamaño mediano */
+    font-size: 1.5em; 
     padding-left: 40px;
     padding-right: 50px;
 }
 
 #slime p {
     margin: 15px 0;
-    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
-    text-align: center; /* Centra el texto */
+    max-width: 600px; 
+    text-align: center; 
 }
 .glide-container {
     width: 18cm;
 }
 
-/* Cambia el tamaño de .glide-container a 10cm cuando la pantalla es angosta */
 @media screen and (max-width: 768px) {
     .glide-container {
         width: 10cm;
     }
 
     #seleccion {
-        width: 100%; /* Hace que el combobox ocupe el ancho completo */
-        margin-right: 0; /* Elimina el espacio a la derecha */
-        margin-left: 0; /* Elimina el margen izquierdo */
-        margin-top: 70px; /* Agrega espacio en la parte superior */
+        width: 100%; 
+        margin-right: 0; 
+        margin-left: 0;
+        margin-top: 70px; 
     }
     main{
         margin-bottom: 460px;
@@ -184,8 +178,8 @@ div.botones2>a{
 
 @keyframes slideDown {
     to {
-        top: 0; /* Mueve el header a su posición final */
-        opacity: 1; /* Hace que el header sea completamente visible */
+        top: 0; 
+        opacity: 1; 
     }
 }
 

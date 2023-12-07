@@ -10,10 +10,10 @@ header {
     color: rgb(255, 255, 255);
     padding: 350px;
     position: relative;
-    top: -50px; /* Ajusta la distancia inicial desde arriba */
-    z-index: 1; /* Asegura que el header esté sobre el main */
-    opacity: 0; /* Hace que el header esté invisible inicialmente */
-    animation: slideDown 1s ease-out forwards; /* Define la animación */
+    top: -50px; 
+    z-index: 1; 
+    opacity: 0; 
+    animation: slideDown 1s ease-out forwards;
 }
 
 header::before {
@@ -24,7 +24,7 @@ header::before {
     right: 0;
     bottom: 0;
     background: #b74fa1 url('imgns/hero-scene-layer-1.png') center/cover fixed;
-    z-index: -1; /* Ajustado a -1 para que esté detrás del contenido del main */
+    z-index: -1;
 }
 
 main {
@@ -36,7 +36,7 @@ main {
     margin-top: -510px;
     padding-top: 300px;
     height: 1010px;
-    z-index: 2; /* Ajustado a 2 para que esté sobre el header y su fondo */
+    z-index: 2;
 }
 div.opciones{
     padding-top: 500px;
@@ -48,7 +48,6 @@ label {
     margin-bottom: 5px;
 }
 
-/* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 #opciones {
     display: flex;
     padding-top: 50px;
@@ -63,8 +62,8 @@ label {
     padding-left: 7px;
     border-radius: 15px;
     text-align: center;
-    width: 150px; /* Ajusta el ancho según sea necesario */
-    margin-right: 10px; /* Añade margen derecho para separar de otros elementos */
+    width: 150px; 
+    margin-right: 10px; 
 }
 
 #seleccion option {
@@ -80,13 +79,13 @@ label {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la fila siguiente si no hay suficiente espacio */
+    flex-wrap: wrap;
 }
 
 #imagenes_inicio div {
     text-align: center;
     margin: 10px;
-    flex: 1; /* Hace que cada div ocupe el mismo espacio en la fila */
+    flex: 1; 
 }
 
 #imagenes_inicio img {
@@ -105,13 +104,13 @@ label {
 #slime {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinea los elementos al centro */
+    align-items: center; 
 }
 
 #slime > div {
     display: flex;
-    flex-direction: column; /* Cambiado a columna para alinear verticalmente */
-    align-items: center; /* Alinea los elementos al centro */
+    flex-direction: column; 
+    align-items: center; 
     margin-bottom: 20px;
 }
 
@@ -123,41 +122,32 @@ label {
 
 #slime h3 {
     margin: 15px 0;
-    font-size: 1.5em; /* Tamaño mediano */
+    font-size: 1.5em; 
     padding-left: 40px;
     padding-right: 50px;
 }
 
 #slime p {
     margin: 15px 0;
-    max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
-    text-align: center; /* Centra el texto */
+    max-width: 600px; 
+    text-align: center; 
 }
 
-/* #fila2 img {
-    margin-top: 10px;
-}
-
-#fila3 {
-    max-width: 800px;
-    margin: 0 auto;
-} */
 
 .glide-container {
     width: 18cm;
 }
 
-/* Cambia el tamaño de .glide-container a 10cm cuando la pantalla es angosta */
 @media screen and (max-width: 768px) {
     .glide-container {
         width: 10cm;
     }
 
     #seleccion {
-        width: 100%; /* Hace que el combobox ocupe el ancho completo */
-        margin-right: 0; /* Elimina el espacio a la derecha */
-        margin-left: 0; /* Elimina el margen izquierdo */
-        margin-top: 80px; /* Agrega espacio en la parte superior */
+        width: 100%; 
+        margin-right: 0; 
+        margin-left: 0; 
+        margin-top: 80px;/
     }
     main{
         margin-bottom: 160px;
@@ -198,8 +188,8 @@ div.botones2>a{
 
 @keyframes slideDown {
     to {
-        top: 0; /* Mueve el header a su posición final */
-        opacity: 1; /* Hace que el header sea completamente visible */
+        top: 0; 
+        opacity: 1; 
     }
 }
 
