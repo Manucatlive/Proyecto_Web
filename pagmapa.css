@@ -10,30 +10,47 @@ body {
     position: relative;
 }
 
-.botones {
+.opciones {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
     display: flex;
-}
-
-.boton {
-    text-decoration: none;
+    flex-direction: row;
+    align-items: flex-end;
     border: 2px solid #fff;
-    border-radius: 20%;
-    padding: 10px 20px;
-    margin: 0 10px;
-    background: linear-gradient(to bottom, #ff9c9c, #ff7070);
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
-.boton:focus,
-.boton:hover {
-    background: linear-gradient(to bottom, #4a90e2, #4169e1);
-    animation: agua 0.5s ease forwards;
+.opciones ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    
+}
+
+.opciones li {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.opciones a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+}
+
+.opciones a:hover {
+    color: #ff80b3;
 }
 
 @keyframes agua {

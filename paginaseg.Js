@@ -6,16 +6,23 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("seleccion").addEventListener("change", function () {
         const selectedValue = this.value;
 
-        // Oculta todas las secciones
-        slimeSection.style.display = "none";
-        recursosContenido.style.display = "none";
+        // Redirige a otra página según la selección
+        if (selectedValue === "slime") {
+            window.location.href = "paginaseg.html";
+        } else if (selectedValue === "recursos") {
+            window.location.href = "recursos.html";
+        } else if (selectedValue === "npc") {
+            window.location.href = "npc.html";
+        } else {
+            // Oculta todas las secciones si no hay selección válida
+            slimeSection.style.display = "none";
+            recursosContenido.style.display = "none";
+        }
 
         // Muestra la sección seleccionada y activa el carrusel si es necesario
         if (selectedValue === "slime") {
             slimeSection.style.display = "flex";
             activateGlide();
-        } else if (selectedValue === "recursos") {
-            recursosContenido.style.display = "block";
         }
     });
 

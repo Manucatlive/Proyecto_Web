@@ -2,18 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #adf4c6;
+    background-color: #ffffff;
 }
-
 header {
-    background: #ffffff url('imgns/hero-scene-layer-1.png') center/cover fixed;
+    background: #39a97e url('imgns/hero-scene-layer-1.png') center/cover fixed;
     color: rgb(255, 255, 255);
-    padding: 350px;
+    padding: 230px; /* Ajusta el valor de padding según sea necesario */
     position: relative;
-    top: -50px; /* Ajusta la distancia inicial desde arriba */
-    z-index: 1; /* Asegura que el header esté sobre el main */
-    opacity: 0; /* Hace que el header esté invisible inicialmente */
-    animation: slideDown 1s ease-out forwards; /* Define la animación */
+    top: -50px;
+    z-index: 1;
+    opacity: 0;
+    animation: slideDown 1s ease-out forwards;
 }
 
 header::before {
@@ -23,7 +22,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #b74fa1 url('imgns/hero-scene-layer-1.png') center/cover fixed;
+    background: #2d8287 url('imgns/hero-scene-layer-1.png') center/cover fixed;
     z-index: -1; /* Ajustado a -1 para que esté detrás del contenido del main */
 }
 
@@ -33,38 +32,35 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    margin-top: -510px;
+    margin-top: -590px;
     padding-top: 300px;
-    height: 1010px;
+    height: 1710px;
     z-index: 2; /* Ajustado a 2 para que esté sobre el header y su fondo */
 }
-div.opciones{
-    padding-top: 500px;
-}
-#recursos-contenido {
-    display: none;
-}
-label {
+/* div.opciones{
+    padding-top: -500px;
+} */
+/* label {
     margin-bottom: 5px;
-}
+} */
 
 /* Añade estas reglas al archivo paginaseg.css o en la etiqueta <style> dentro del head */
 #opciones {
     display: flex;
-    padding-top: 50px;
+    padding-top: 250px;
     margin-left: 10px; 
 }
 
 #seleccion {
     border: none;
-    background-color: #fe5873;
+    background-color: #3e446c;
     color: rgb(243, 243, 243);
     padding: 15px;
     padding-left: 7px;
     border-radius: 15px;
     text-align: center;
     width: 150px; /* Ajusta el ancho según sea necesario */
-    margin-right: 10px; /* Añade margen derecho para separar de otros elementos */
+    margin-right: 10px; 
 }
 
 #seleccion option {
@@ -76,11 +72,11 @@ label {
 #seleccion option[value="npc"] { background-color: #d8f080; }
 
 #imagenes_inicio {
-    margin-top: -300px;
+    margin-top: -200px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la fila siguiente si no hay suficiente espacio */
+    flex-wrap: wrap; 
 }
 
 #imagenes_inicio div {
@@ -105,7 +101,8 @@ label {
 #slime {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Alinea los elementos al centro */
+    align-items: center;
+    margin-top: 240px; /* Alinea los elementos al centro */
 }
 
 #slime > div {
@@ -133,16 +130,6 @@ label {
     max-width: 600px; /* Ajusta el ancho máximo según sea necesario */
     text-align: center; /* Centra el texto */
 }
-
-/* #fila2 img {
-    margin-top: 10px;
-}
-
-#fila3 {
-    max-width: 800px;
-    margin: 0 auto;
-} */
-
 .glide-container {
     width: 18cm;
 }
@@ -160,7 +147,7 @@ label {
         margin-top: 80px; /* Agrega espacio en la parte superior */
     }
     main{
-        margin-bottom: 160px;
+        margin-bottom: 350px;
     }
 }
 
@@ -169,6 +156,7 @@ footer {
     padding: 20px;
     text-align: center;
     transition: background-color 0.5s ease;
+    margin-top: 50px;
 }
 
 footer .botones2 {
