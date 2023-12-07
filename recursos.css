@@ -7,12 +7,57 @@ body {
 header {
     background: #39a97e url('imgns/hero-scene-layer-1.png') center/cover fixed;
     color: rgb(255, 255, 255);
-    padding: 230px; 
-    position: relative;
+    padding: 230px;
+    /* position: relative; */
     top: -50px;
     z-index: 1;
     opacity: 0;
     animation: slideDown 1s ease-out forwards;
+
+}
+.opciones1 {
+    /* margin-top: 460px; */
+    margin-left: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    border: 2px solid #fff;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.opciones1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+
+}
+
+.opciones1 li {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.opciones1 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+}
+
+.opciones1 a:hover {
+    color: #ff80b3;
 }
 
 header::before {
@@ -35,13 +80,13 @@ main {
     margin-top: -590px;
     padding-top: 300px;
     height: 1710px;
-    z-index: 2; 
+    z-index: 2;
 }
 
 #opciones {
     display: flex;
     padding-top: 250px;
-    margin-left: 10px; 
+    margin-left: 10px;
 }
 
 #seleccion {
@@ -52,8 +97,8 @@ main {
     padding-left: 7px;
     border-radius: 15px;
     text-align: center;
-    width: 150px; 
-    margin-right: 10px; 
+    width: 150px;
+    margin-right: 10px;
 }
 
 #seleccion option {
@@ -65,17 +110,17 @@ main {
 #seleccion option[value="npc"] { background-color: #d8f080; }
 
 #imagenes_inicio {
-    margin-top: -200px;
+    margin-top: -100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 #imagenes_inicio div {
     text-align: center;
     margin: 10px;
-    flex: 1; 
+    flex: 1;
 }
 
 #imagenes_inicio img {
@@ -95,12 +140,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 #slime > div {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -113,14 +158,15 @@ main {
 
 #slime h3 {
     margin: 15px 0;
-    font-size: 1.5em; 
+    font-size: 1.5em;
     padding-left: 40px;
     padding-right: 50px;
 }
 
 #slime p {
-    margin: 15px 0;
+    /* margin: 15px 0;
     max-width: 600px;
+    text-align: center; */
     text-align: center;
 }
 .glide-container {
@@ -134,13 +180,18 @@ main {
     }
 
     #seleccion {
-        width: 100%; 
-        margin-right: 0; 
-        margin-left: 0; 
-        margin-top: 80px; 
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 80px;
     }
     main{
         margin-bottom: 350px;
+    }
+    header{
+        margin-top: auto;
+        height: 150px;
+        size-adjust: auto;
     }
 }
 
@@ -178,7 +229,7 @@ div.botones2>a{
 
 @keyframes slideDown {
     to {
-        top: 0; 
+        top: 0;
         opacity: 1;
     }
 }

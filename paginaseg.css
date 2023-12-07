@@ -8,14 +8,55 @@ body {
 header {
     background: #ffffff url('imgns/hero-scene-layer-1.png') center/cover fixed;
     color: rgb(255, 255, 255);
-    padding: 350px;
+    padding: 16%; /* Cambiado a porcentaje para ajustarse al tamaño de la pantalla */
     position: relative;
     top: -50px; 
     z-index: 1; 
     opacity: 0; 
     animation: slideDown 1s ease-out forwards;
 }
+.opciones1 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    border: 2px solid #fff;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+}
 
+.opciones1 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    
+}
+
+.opciones1 li {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.opciones1 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    border: 2px solid white;
+}
+
+.opciones1 a:hover {
+    color: #ff80b3;
+}
 header::before {
     content: "";
     position: absolute;
@@ -33,7 +74,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    margin-top: -510px;
+    margin-top: -310px;
     padding-top: 300px;
     height: 1010px;
     z-index: 2;
@@ -105,6 +146,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center; 
+    padding-bottom: -500px;
 }
 
 #slime > div {
@@ -115,22 +157,23 @@ label {
 }
 
 #slime img {
-    padding-top: 15px;
+    padding-top: 5px;
     max-width: 100px;
     margin-right: 20px;
 }
 
 #slime h3 {
-    margin: 15px 0;
-    font-size: 1.5em; 
+    /* margin: 15px 0;
+    font-size: 350%; 
     padding-left: 40px;
-    padding-right: 50px;
+    padding-right: 50px; */
 }
 
 #slime p {
-    margin: 15px 0;
+    /* margin: 15px 0;
     max-width: 600px; 
-    text-align: center; 
+    text-align: center;
+    font-size: 250%;  */
 }
 
 
@@ -138,11 +181,18 @@ label {
     width: 18cm;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .glide-container {
         width: 10cm;
     }
-
+    #imagenes_inicio img {
+        margin-top: 350px;
+        width: 100px;
+        height: 100px;
+        border: 3px solid #bababa;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+    }
     #seleccion {
         width: 100%; 
         margin-right: 0; 
@@ -150,7 +200,26 @@ label {
         margin-top: 80px;/
     }
     main{
-        margin-bottom: 160px;
+        margin-bottom: 200px;
+    }
+    .opciones1 {
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 35%;
+        margin-top: 5px;
+        border: none;
+    }
+    .opciones1>ul>li{
+        margin-top: 15px;
+    }
+    .opciones ul {
+        flex-direction: column;
+        text-align: right;
+    }
+    header{
+        margin-top: auto;
+        height: 150px;
+        size-adjust: auto;
     }
 }
 
@@ -159,7 +228,7 @@ footer {
     padding: 20px;
     text-align: center;
     transition: background-color 0.5s ease;
-    margin-top: 80px;
+    margin-top: 139px;
 }
 
 footer .botones2 {
@@ -169,7 +238,7 @@ footer .botones2 {
 
 footer button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 150px;
     border: none;
     border-radius: 20px;
     background-color: transparent;
