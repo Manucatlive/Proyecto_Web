@@ -60,7 +60,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    /* Estilos específicos para pantallas angostas */
+    
 
     .opciones {
         position: static;
@@ -98,7 +98,7 @@ body {
     }
 
     .opciones a {
-        font-size: 14px; /* Tamaño de fuente reducido para opciones en el header */
+        font-size: 14px; 
         padding: 8px; /* Reducir el padding para las opciones */
     }
 
