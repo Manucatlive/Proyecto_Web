@@ -4,7 +4,9 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #6a76b3;
+    background-color: #5DA6FE;
+    font-size: 20px;
+    color: #001f3f;
 }
 
 .contenido {
@@ -70,7 +72,7 @@ body {
         width: 100%; /* Make subtitulo2 take the full width */
         margin: 0; /* Reset margin */
         margin-top: 20px; /* Add spacing between subtitulo1 and subtitulo2 */
-        padding: 15px; /* Ensure it takes the full width */
+        padding: 15px;
     }
   
     .subtitulo2 {
@@ -79,38 +81,85 @@ body {
       margin-top: 20px; /* Add spacing between subtitulo1 and subtitulo2 */
       padding: 15px; /* Add padding for better readability */
     }
-
   }
 
-.imagen {
+  .imagen {
     width: 100%;
     height: 50vh;
+    animation: bounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Aplica la animación de rebote con duración de 1 segundo y una curva de velocidad personalizada */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* En estos puntos clave, la imagen está en su posición original */
+    }
+    40% {
+        transform: translateY(10px); /* En este punto, la imagen se desplaza hacia abajo */
+    }
+    60% {
+        transform: translateY(5px); /* En este punto, la imagen rebota hacia arriba */
+    }
 }
 
 .imagen2 {
     margin-top: 10px;
-    width: 100%;
+    margin-left: 160px;
+    margin-right: 160px;
+    width: 69%;
     height: 80vh;
     display: block;
-    margin-left: 5px;
+    align-items: center;
+    animation: pop 0.4s ease-out; /* Aplica la animación "pop" con duración de 1 segundo y efecto ease-out */
 }
+
+@keyframes pop {
+    from {
+        transform: scale(0.5); /* Escala inicial de 0.5 (la mitad del tamaño original) */
+        opacity: 0; /* Inicialmente transparente */
+    }
+    to {
+        transform: scale(1); /* Escala final de 1 (tamaño original) */
+        opacity: 1; /* Opacidad final de 1 (totalmente visible) */
+    }
+}
+
 
 .contenido-descripcion {
     text-align: center;
     margin-top: 80px;
 }
+.subtitulo::before,
+.subtitulo2::before {
+    content: "";
+    background-image: url('imgns/detallesmapas1.png'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 15px; /* To match the border-radius of .subtitulo and .subtitulo2 */
+    opacity: 0.5; /* Adjust the opacity as needed */
+}
 
 .subtitulo {
+    position: relative;
     background-color: #9cd9ff;
     border-radius: 15px;
     text-align: center;
-    margin: 30px 10px 50px 10px;
+    margin: 30px 150px 50px 130px;
+    z-index: 1; /* Ensure the content is above the background image */
 }
+
 .subtitulo2 {
+    position: relative;
     background-color: #9cd9ff;
     border-radius: 15px;
     text-align: center;
-    margin: 10px 10px 30px 10px;
+    margin: 10px 150px 30px 130px;
+    z-index: 1; /* Ensure the content is above the background image */
 }
 .ubicaciones>select {
     background-color: #184384;
